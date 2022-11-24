@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import Input from "../../UI/Input";
 import classes from "./MealItemForm.module.css";
-import AddCartContext from "../../../store/add-cart-context";
+import CartContext from "../../../store/cart-context";
 
 const MealItemForm = (props) => {
-  const ctx = useContext(AddCartContext);
+  const ctx = useContext(CartContext);
   const AddToCartHandler = (event) => {
     event.preventDefault();
     ctx.onAddCart(["helle"]);
